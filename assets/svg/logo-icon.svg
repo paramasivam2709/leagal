@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Stackly">
+  <circle cx="32" cy="32" r="30" fill="#071A33"/>
+  <circle cx="32" cy="32" r="30" fill="none" stroke="#D6AD60" stroke-width="2"/>
+  <circle cx="32" cy="32" r="25" fill="none" stroke="#D6AD60" stroke-width="1" opacity="0.5"/>
+  <g fill="none" stroke="#D6AD60" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" transform="translate(14,14) scale(1.5)">
+    <line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/>
+  </g>
+</svg>

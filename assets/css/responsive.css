@@ -1,0 +1,66 @@
+
+/* ============================================================
+   STACKLY — Responsive breakpoints
+   ============================================================ */
+@media (max-width:1439px){
+  .cards-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:1200px){
+  .nav-desktop{gap:1.3rem}
+  .nav-link{font-size:.88rem}
+  .header-actions .btn{padding:.8rem 1.4rem;font-size:.87rem}
+  .header-actions .header-login{padding:.62rem 1.25rem;font-size:.86rem}
+  .cards-grid,.cards-grid--3{grid-template-columns:repeat(3,1fr)}
+  .trustbar .container{grid-template-columns:repeat(3,1fr);row-gap:1.6rem}
+  .trust-item:nth-child(4){border-left:none}
+}
+@media (max-width:1023px){
+  .nav-desktop,.header-auth,.header-actions .btn,.header-login{display:none}
+  .hamburger{display:flex}
+  .header-logo img{width:42px;height:42px}
+  .hero{min-height:auto}
+  .hero-grid{grid-template-columns:1fr;gap:2rem}
+  .hero-visual{display:none}
+  .hero .container{padding-top:150px;padding-bottom:80px}
+  .hero-stats{grid-template-columns:repeat(2,1fr);gap:1.6rem 3rem;width:100%}
+  .about-grid,.why-grid,.contact-grid,.faq-wrap,.grid-2{grid-template-columns:1fr}
+  .cards-grid,.cards-grid--3,.blog-grid{grid-template-columns:repeat(2,1fr)}
+  .att-grid{grid-template-columns:repeat(2,1fr)}
+  .price-grid{grid-template-columns:1fr;max-width:520px;margin-inline:auto}
+  .process-grid{grid-template-columns:repeat(2,1fr);gap:1.8rem}
+  .process-grid::before{display:none}
+  .why-feats{grid-template-columns:repeat(2,1fr)}
+  .mvv{grid-template-columns:1fr;max-width:520px}
+  .footer-top{grid-template-columns:1fr 1fr;gap:2.2rem}
+  .cta-inner{flex-direction:column;align-items:flex-start}
+}
+@media (max-width:767px){
+  html{scroll-padding-top:78px}
+  body{font-size:15px}
+  .section{padding:3.6rem 0}
+  .trustbar .container{grid-template-columns:1fr 1fr;padding:1.8rem 0}
+  .trust-item{justify-content:flex-start}
+  .trust-item + .trust-item{border-left:none}
+  .cards-grid,.cards-grid--3,.blog-grid{grid-template-columns:1fr}
+  .att-grid{grid-template-columns:1fr;max-width:420px;margin-inline:auto}
+  .process-grid{grid-template-columns:1fr}
+  .why-feats{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .hero-stats{grid-template-columns:repeat(2,1fr);gap:1.4rem 2rem}
+  .footer-top{grid-template-columns:1fr;gap:2rem;padding:3.4rem 0 2.4rem}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .price-card{padding:2rem 1.5rem}
+  .testi-card{text-align:left}
+  .testi-person{justify-content:flex-start}
+  .about-points{grid-template-columns:1fr}
+  .page-hero{padding:9.5rem 0 4rem}
+  .back-top{right:16px;bottom:16px;width:44px;height:44px}
+}
+@media (max-width:480px){
+  .hero-cta .btn{width:100%}
+  .hero-stats{grid-template-columns:1fr 1fr;gap:1.2rem}
+  .trustbar .container{grid-template-columns:1fr}
+  .cta-inner{padding:2.2rem 1.5rem}
+  .news-form{flex-direction:column;border-radius:14px}
+  .news-form button{padding:.85rem}
+}

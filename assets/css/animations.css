@@ -1,0 +1,63 @@
+
+/* ============================================================
+   STACKLY — Animations & motion
+   ============================================================ */
+@keyframes blink{50%{opacity:0}}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes scrollLine{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+@keyframes goldPulse{0%,100%{box-shadow:0 0 0 0 rgba(214,173,96,.45)}50%{box-shadow:0 0 0 12px rgba(214,173,96,0)}}
+@keyframes drawStroke{to{stroke-dashoffset:0}}
+@keyframes riseIn{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:translateY(0)}}
+@keyframes scaleIn{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
+
+/* Preloader */
+.preloader{position:fixed;inset:0;z-index:2000;background:var(--navy-900);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.6rem;transition:opacity .6s var(--ease),visibility .6s}
+.preloader.done{opacity:0;visibility:hidden}
+.preloader-logo{width:110px;height:110px;position:relative}
+.preloader-logo img,.preloader-logo svg{width:100%;height:100%}
+.preloader-ring{position:absolute;inset:-14px;border-radius:50%;border:1.5px solid transparent;border-top-color:var(--gold);border-right-color:var(--gold);animation:spin 1.4s linear infinite}
+.preloader-text{color:var(--gold-light);font-size:.78rem;letter-spacing:.5em;text-transform:uppercase;font-weight:600;animation:blink 1.6s ease-in-out infinite}
+.preloader-bar{width:180px;height:2px;background:rgba(255,255,255,.12);border-radius:2px;overflow:hidden}
+.preloader-bar i{display:block;height:100%;width:40%;background:var(--grad-gold);border-radius:2px;animation:loadSlide 1.2s var(--ease) infinite}
+@keyframes loadSlide{0%{transform:translateX(-120%)}100%{transform:translateX(320%)}}
+
+/* Scroll reveal (JS adds .revealed; AOS also used) */
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.revealed{opacity:1;transform:none}
+.reveal-d1{transition-delay:.1s}.reveal-d2{transition-delay:.2s}.reveal-d3{transition-delay:.3s}.reveal-d4{transition-delay:.4s}
+
+/* Hero intro states (GSAP takes over when available; CSS fallback) */
+.hero [data-hero]{opacity:0}
+.hero.gsap-off [data-hero]{animation:riseIn .9s var(--ease) forwards}
+.hero.gsap-off [data-hero]:nth-child(2){animation-delay:.12s}
+.hero.gsap-off [data-hero]:nth-child(3){animation-delay:.24s}
+.hero.gsap-off [data-hero]:nth-child(4){animation-delay:.36s}
+.hero.gsap-off [data-hero]:nth-child(5){animation-delay:.48s}
+
+/* Button pulse for primary hero CTA */
+.btn-pulse{animation:goldPulse 2.6s ease-out infinite}
+
+/* 404 number shimmer */
+.err-404{font-family:var(--font-head);font-size:clamp(6rem,20vw,11rem);font-weight:800;line-height:1;background:linear-gradient(110deg,#F2D18B 20%,#fff 40%,#D6AD60 60%,#F2D18B 80%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 3.5s linear infinite}
+
+/* Card gold border sweep */
+.svc-card,.post-card,.att-card{position:relative}
+.svc-card::before,.post-card::before,.att-card::before{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:var(--grad-gold);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease);z-index:3;border-radius:3px 3px 0 0}
+.svc-card:hover::before,.post-card:hover::before,.att-card:hover::before{transform:scaleX(1)}
+
+/* Marquee of practice areas */
+.marquee{overflow:hidden;border-top:1px solid rgba(214,173,96,.25);border-bottom:1px solid rgba(214,173,96,.25);padding:1.1rem 0;background:var(--navy-900)}
+.marquee-track{display:flex;gap:3rem;width:max-content;animation:marquee 30s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-track span{font-family:var(--font-head);font-size:1.05rem;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:3rem;white-space:nowrap}
+.marquee-track span::after{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold)}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* Reduced motion */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}
+  .reveal,.hero [data-hero]{opacity:1 !important;transform:none !important}
+  .preloader{display:none}
+}

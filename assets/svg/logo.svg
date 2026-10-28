@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 252 64" role="img" aria-label="Stackly Legal Consulting">
+  <g fill="none" stroke="#D6AD60" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" transform="translate(6,6) scale(1.9)">
+    <line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/>
+  </g>
+  <circle cx="32" cy="32" r="29" fill="none" stroke="#D6AD60" stroke-width="1.4" opacity="0.55"/>
+  <text x="70" y="30" font-family="Playfair Display, Georgia, serif" font-size="25" font-weight="700" fill="#071A33" letter-spacing="2.5">STACKLY</text>
+  <text x="71" y="48" font-family="Inter, Arial, sans-serif" font-size="10.5" fill="#D6AD60" letter-spacing="4.6">LEGAL CONSULTING</text>
+</svg>

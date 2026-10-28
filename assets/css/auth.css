@@ -1,0 +1,50 @@
+
+/* ============================================================
+   STACKLY — Authentication pages (split-screen navy & gold)
+   ============================================================ */
+.auth-body{background:var(--ivory);min-height:100vh}
+.auth-wrap{display:grid;grid-template-columns:1fr 1fr;min-height:100vh}
+.auth-visual{position:relative;background:var(--navy-900);overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:2.6rem 3rem;color:var(--white)}
+.auth-visual img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.45}
+.auth-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(7,26,51,.55),rgba(7,26,51,.92))}
+.auth-visual > *{position:relative;z-index:2}
+.auth-quote blockquote{font-family:var(--font-head);font-size:clamp(1.3rem,2.2vw,1.8rem);line-height:1.5;color:var(--white)}
+.auth-quote cite{display:block;margin-top:1.2rem;font-style:normal;color:var(--gold-light);font-size:.88rem;letter-spacing:.1em}
+.auth-quote svg{width:40px;height:40px;color:var(--gold);margin-bottom:1.2rem}
+.auth-panel{display:flex;align-items:center;justify-content:center;padding:3rem 1.6rem}
+.auth-card{width:min(460px,100%)}
+.auth-card .header-logo{margin-bottom:2rem}
+.auth-card .header-logo img{width:48px;height:48px}
+.auth-card h1{font-size:1.9rem;margin-bottom:.5rem}
+.auth-card > p{color:var(--text);font-size:.93rem;margin-bottom:1.9rem}
+.pw-wrap{position:relative}
+.pw-toggle{position:absolute;right:12px;top:50%;transform:translateY(-50%);color:var(--text);display:flex;padding:.3rem}
+.pw-toggle svg{width:18px;height:18px}
+.pw-meter{display:flex;gap:5px;margin-top:.55rem}
+.pw-meter i{height:4px;flex:1;border-radius:4px;background:var(--border);transition:background .3s}
+.pw-meter[data-level="1"] i:nth-child(-n+1){background:#C0392B}
+.pw-meter[data-level="2"] i:nth-child(-n+2){background:#D68910}
+.pw-meter[data-level="3"] i:nth-child(-n+3){background:var(--gold)}
+.pw-meter[data-level="4"] i{background:#1E7B34}
+.pw-hint{font-size:.76rem;margin-top:.35rem;color:var(--text)}
+.auth-row{display:flex;justify-content:space-between;align-items:center;font-size:.86rem;margin:.4rem 0 1.5rem;flex-wrap:wrap;gap:.6rem}
+.auth-row a{color:var(--gold-dark);font-weight:600}
+.auth-row a:hover{text-decoration:underline}
+.checkbox{display:flex;align-items:center;gap:.55rem;font-size:.86rem;cursor:pointer}
+.checkbox input{width:16px;height:16px;accent-color:var(--gold-dark)}
+.role-select{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-bottom:1.4rem}
+.role-opt{position:relative}
+.role-opt input{position:absolute;opacity:0}
+.role-opt span{display:flex;align-items:center;justify-content:center;gap:.5rem;padding:.85rem;border:1.5px solid var(--border);border-radius:11px;font-size:.9rem;font-weight:600;color:var(--text-dark);transition:.3s;cursor:pointer}
+.role-opt svg{width:17px;height:17px}
+.role-opt input:checked + span{border-color:var(--gold);background:rgba(214,173,96,.12);color:var(--navy-900);box-shadow:0 0 0 3px rgba(214,173,96,.15)}
+.auth-switch{text-align:center;font-size:.9rem;margin-top:1.6rem;color:var(--text)}
+.auth-switch a{color:var(--gold-dark);font-weight:600}
+.auth-back{display:inline-flex;align-items:center;gap:.45rem;font-size:.85rem;color:var(--text);margin-bottom:1.6rem;transition:color .3s}
+.auth-back svg{width:15px;height:15px;transform:rotate(180deg)}
+.auth-back:hover{color:var(--gold-dark)}
+.auth-note{margin-top:1.4rem;font-size:.78rem;color:#7C8DA5;background:rgba(7,26,51,.05);border-radius:10px;padding:.8rem 1rem}
+@media (max-width:1023px){
+  .auth-wrap{grid-template-columns:1fr}
+  .auth-visual{display:none}
+}
